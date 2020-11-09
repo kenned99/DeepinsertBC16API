@@ -2,7 +2,7 @@ page 50150 "My Header API"
 {
     PageType = API;
     SourceTable = "My Header";
-    APIPublisher = 'ajk';
+    APIPublisher = 'kej';
     APIGroup = 'demo';
     APIVersion = 'v1.0';
     EntitySetName = 'headers';

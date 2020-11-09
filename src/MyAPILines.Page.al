@@ -5,7 +5,8 @@ page 50153 "MyAPILines"
     DelayedInsert = true;
     AutoSplitKey = true;
     PopulateAllFields = true;
-    ODataKeyFields = SystemId;
+    Permissions = tabledata 50150 = rimd;
+    // ODataKeyFields = SystemId;
 
     layout
     {
@@ -13,7 +14,10 @@ page 50153 "MyAPILines"
         {
             repeater(lines)
             {
-
+                /*field(SystemId; SystemId)
+                {
+                    ApplicationArea = all;
+                }*/
                 field(headerNo; "Header No.")
                 {
                     ApplicationArea = all;
