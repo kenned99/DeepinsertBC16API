@@ -6,7 +6,10 @@ table 50151 "My Line"
         {
             TableRelation = "My Header"."No.";
         }
-        field(2; "Line No."; Integer) { }
+        field(2; "Line No."; Integer)
+        {
+
+        }
         field(3; "Header Id"; Guid)
         {
             TableRelation = "My Header".SystemId;
@@ -22,7 +25,10 @@ table 50151 "My Line"
 
     keys
     {
-        key(PK; "Header No.", "Line No.") { }
+        key(PK; "Header No.", "Line No.")
+        {
+            Clustered = true;
+        }
     }
 
     var

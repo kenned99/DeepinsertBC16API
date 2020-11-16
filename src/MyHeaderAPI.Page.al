@@ -1,6 +1,7 @@
 page 50150 "My Header API"
 {
     PageType = API;
+
     SourceTable = "My Header";
     APIPublisher = 'kej';
     APIGroup = 'demo';
@@ -14,13 +15,22 @@ page 50150 "My Header API"
     {
         area(Content)
         {
-            field(id; SystemId) { }
-            field(headerNo; "No.") { }
-            field(description; Description) { }
-            part(lines; MyAPILines)
+            field(id; SystemId)
             {
-                EntitySetName = 'lines';
-                EntityName = 'line';
+
+            }
+            field(headerNo; "No.")
+            {
+
+            }
+            field(description; Description)
+            {
+
+            }
+            part(headerslines; MyAPILines)
+            {
+                EntitySetName = 'headerslines';
+                EntityName = 'headersline';
                 SubPageLink = "Header Id" = field(SystemId);
             }
         }

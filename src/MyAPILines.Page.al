@@ -6,7 +6,7 @@ page 50153 "MyAPILines"
     AutoSplitKey = true;
     PopulateAllFields = true;
     Permissions = tabledata 50150 = rimd;
-    // ODataKeyFields = SystemId;
+    ODataKeyFields = SystemId;
 
     layout
     {
@@ -18,6 +18,10 @@ page 50153 "MyAPILines"
                 {
                     ApplicationArea = all;
                 }*/
+                field(id; Format(SystemId, 0, 4).ToLower())
+                {
+                    ApplicationArea = All;
+                }
                 field(headerNo; "Header No.")
                 {
                     ApplicationArea = all;
@@ -61,6 +65,7 @@ page 50153 "MyAPILines"
     var
         MyHeader: Record "My Header";
     begin
+        //error('hej, jeg hedder Kenneth');
         IsDeepInsert := IsNullGuid("Header Id");
         if not IsDeepInsert then begin
             MyHeader.GetBySystemId("Header Id");

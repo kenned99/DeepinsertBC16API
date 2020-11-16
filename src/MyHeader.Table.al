@@ -2,13 +2,22 @@ table 50150 "My Header"
 {
     fields
     {
-        field(1; "No."; Code[10]) { }
-        field(2; Description; Text[50]) { }
+        field(1; "No."; Code[10])
+        {
+
+        }
+        field(2; Description; Text[50])
+        {
+
+        }
     }
 
     keys
     {
-        key(PK; "No.") { }
+        key(PK; "No.")
+        {
+
+        }
     }
 
     trigger OnInsert()
